@@ -49,11 +49,9 @@ function banner(){
     echo "     ............';lodddolc:;;;::ccllcc:;'............."
     echo "     ................',,'..........'''................."
     echo "     .................................................."
-    echo ""
     sleep 2
     echo -e "${end}"
     echo -e "${red}"
-
     echo "   Automatic Installation of Arch Linux by Lord Guccif3r"
     sleep 5
     echo -e "${end}"
@@ -62,7 +60,6 @@ function banner(){
 function banner2(){
     sleep 3
 	echo -e "${green}"
-
     echo "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
     echo "████ ████▀▄▄▀█ ▄▄▀█ ▄▀████ ▄▄ █ ██ █▀▄▀█▀▄▀██▄██ ▄▄█ ▄▄ █ ▄▄▀██"
     echo "████ ████ ██ █ ▀▀▄█ █ ████ █▀▀█ ██ █ █▀█ █▀██ ▄█ ▄████▄▀█ ▀▀▄██"
@@ -277,7 +274,8 @@ EOF
     echo -e "${yellow}"
     echo "Ahora toma asiento en la HERMAN MILLER mientras se isntalan las dependencias"
     echo -e "${end}"
-    sleep 7
+    sleep 5
+    clear
 }
 
 function Kernel_error(){
