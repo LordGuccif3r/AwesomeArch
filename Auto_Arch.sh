@@ -235,13 +235,17 @@ function AUTOAWESOME(){
     sudo cp AutoAwesome/launchautoawesome /mnt/usr/bin/
     sudo cp AutoAwesome/autoawesome /mnt/usr/bin/
     sudo chmod 777 /mnt/usr/bin/launchautoawesome
+    sudo chown $sudo_user:$sudo_user /mnt/usr/bin/launchautoawesome
     sudo chmod 777 /mnt/usr/bin/autoawesome
+    sudo chown $sudo_user:$sudo_user /mnt/usr/bin/autoawesome
     mkdir -p /mnt/home/$sudo_user/.local/share/applications/
     sudo cp AutoAwesome/autoawesome.desktop /mnt/home/$sudo_user/.local/share/applications/
-    chmod 777 /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop
+    chmod 777 /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop 
     sudo cp AutoAwesome/autoawesome.svg /mnt/usr/share/icons/hicolor/scalable/apps/
     cp -r AutoAwesome /mnt/home/$sudo_user/
-    cp -r AutoAwesome /mnt/root/
+    cp -r AutoAwesome /mnt/root
+    sudo chown $sudo_user:$sudo_user /mnt/home/$sudo_user/AutoAwesome
+    sudo chown $sudo_user:$sudo_user /mnt/root/AutoAwesome
 }
 
 function LA_SILLA_PA_CUANDO(){
