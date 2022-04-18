@@ -1,7 +1,7 @@
 # Automatic tool to install Arch Linux and a custome awesome theme
 ## Final Results
 ![AutoAwesome](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome2.PNG)
-![AutoAwesome2]("https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/awesome.PNG")
+![AutoAwesome2](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/awesome.PNG)
 ## Installation
 
 **1)** Clone and lauch the Auto_arch.sh script
