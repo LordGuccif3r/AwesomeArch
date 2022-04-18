@@ -1,6 +1,10 @@
 # Automatic tool to install Arch Linux and a custome awesome theme
+## Final Results
+![autoBspwm2.1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome2.PNG)
 
-## First step install git
+## Installation
+
+**1)** Clone and lauch the Auto_arch.sh script
 ```
 pacman -Sy git
 git clone https://github.com/LordGuccif3r/AwesomeArch.git
@@ -8,10 +12,13 @@ cd AwesomeArch
 chmod +x Auto_Arch.sh
 ./Auto_Arch.sh
 ```
+**2)** After first reboot, go to menu and clic on AutoAwesome APP
 
+![autoBspwm2.1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome4.PNG)
 
-## Final Results
-![autoBspwm2.1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome2.PNG)
+**3)** After second reboot, go to setting in the lower right corner and select awesome
+
+**4)** Now you can say "I USE ARCH BY THE WAY"
 
 ## If you want to make changes you need to watch the video of s4vitar on youtube 
 
