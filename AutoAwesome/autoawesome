@@ -1,0 +1,111 @@
+#!/bin/bash
+yellow="\e[0;33m\033[1m"
+red="\e[0;31m\033[1m"
+
+function banner(){
+	clear
+	echo -e "${yellow}"
+
+    echo "     ............,,'...............'..................."
+    echo "     ...........,oxdlc:;'........:cc,.................."
+    echo "     ............coolc;;::,....'cc;...................."
+    echo "     .............,,,,,'';c,.';c:'....................."
+    echo "     .....................',.;lc,;cll'................."
+    echo "     ........................',,:oooc.................."
+    echo "     ...........',,;;;;;,'........',..'.,ldl:,........."
+    echo "     ........';:ccclllloool:,......','...:k00Odc'......"
+    echo "     .......;:ccclllloooddxxxdlc'...'.....,lkOOkd;....."
+    echo "     .......'',;:cloodddxxkkO000kocclccc:lodkOkkkd;...."
+    echo "     ..............';:coxkO0KKKXXXKK0kdddxkOkkkxxxl'..."
+    echo "     ...................',:ldkOO00K000OOOOkkkxxxxdd:..."
+    echo "     ....,;;,,,'................,;:cloddxxxxxxdddol:..."
+    echo "     ...'coooodddolc:;,..................'',,,,,'......"
+    echo "     ...'looddxxkkO00K0Oxoc;,.........................."
+    echo "     ...'lddxxkkO00KXXXKKK00Oxxdlc:;,'................."
+    echo "     ....,;;:cloxk0KXKKK000OOOOOkkkxxdolcc:;;;;;;;;'..."
+    echo "     .............,;cloxkOOOOkkkkxxxxddddooooollllc'..."
+    echo "     .....';;;'.........',;cloddxxxddddoooollllllc,...."
+    echo "     .....'xKK0kdoc;'...........,;:cllooolllllllc,....."
+    echo "     ......,xKKK000Okdl:,'............',,;;;::;;,......"
+    echo "     .......'o000OOOOkkkxdoc:,,'......................."
+    echo "     .........cxOOOkkkxxxxddddoolc:;,'................."
+    echo "     ..........'cdkkxxxxddddooooolllllcc::;'..........."
+    echo "     ............';lodddolc:;;;::ccllcc:;'............."
+    echo "     ................',,'..........'''................."
+    echo "     .................................................."
+    echo ""
+    sleep 2
+    echo -e "${end}"
+    echo -e "${red}"
+    echo "          Thanks S4vitar por for sharing the setup"
+    sleep 2
+    echo "                            and"
+    sleep 1
+    echo "    Thanks Bleyom and Yorkox for the support to the community"
+    echo -e "${end}"
+    sleep 3
+	echo -e "${green}"
+
+    echo "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
+    echo "████ ████▀▄▄▀█ ▄▄▀█ ▄▀████ ▄▄ █ ██ █▀▄▀█▀▄▀██▄██ ▄▄█ ▄▄ █ ▄▄▀██"
+    echo "████ ████ ██ █ ▀▀▄█ █ ████ █▀▀█ ██ █ █▀█ █▀██ ▄█ ▄████▄▀█ ▀▀▄██"
+    echo "████ ▀▀ ██▄▄██▄█▄▄█▄▄█████ ▀▀▄██▄▄▄██▄███▄██▄▄▄█▄███ ▀▀ █▄█▄▄██"
+    echo "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
+    sleep 7
+    echo -e "${end}"
+}
+
+
+
+function INSTALL(){
+    mkdir $HOME/Repos
+    cd Repos && git clone https://aur.archlinux.org/paru-bin.git && cd
+    cd Repos/paru-bin/ && makepkg -si --noconfirm --nocheck && cd
+    mkdir -p Repos/BlackArch
+    cd Repos/BlackArch/ && curl -O https://blackarch.org/strap.sh && cd
+    chmod +x Repos/BlackArch/strap.sh
+    cd Repos/BlackArch/ && sudo bash strap.sh && cd
+    sudo pacman -Sy
+    sudo -s cd /usr/share/fonts/ && sudo wget -O /usr/share/fonts/comprimido.zip http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
+    sudo unzip /usr/share/fonts/comprimido.zip -d /usr/share/fonts/
+    sudo rm -fr /usr/share/fonts/comprimido.zip
+    sudo find /usr/share/fonts/ | grep "\.ttf$" | while read line; do sudo cp -r $line /usr/share/fonts/ ; done
+    sudo rm -fr /usr/share/fonts/iosevka-2.2.1
+    sudo rm -fr /usr/share/fonts/iosevka-slab-2.2.1
+    sudo cp -r AutoAwesome/Configuration_Files/icomoon/* /usr/share/fonts/.
+    paru -S awesome-git zsh-syntax-highlighting zsh-autosuggestions scrub picom-git alacritty rofi todo-bin acpi acpid wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim brightnessctl alsa-utils alsa-tools pulseaudio lm_sensors mpd mpc mpdris2 ncmpcpp playerctl nerd-fonts-jetbrains-mono ttf-font-awesome ttf-font-awesome-4 ttf-material-design-icons --needed --noconfirm
+    cp -r AutoAwesome/Configuration_Files/dotfiles-main/config/* $HOME/.config
+    mkdir $HOME/.local/bin/
+    cp -r AutoAwesome/Configuration_Files/dotfiles-main/bin/* $HOME/.local/bin/
+    cp -r AutoAwesome/Configuration_Files/dotfiles-main/misc/. $HOME
+    sudo pacman -S zsh feh metasploit impacket mdcat neovim evil-winrm python-pip responder nmap whatweb wfuzz gobuster burpsuite locate lsd bat net-tools --noconfirm 
+    sudo usermod --shel /usr/bin/zsh $USER 
+    sudo mkdir -p /usr/share/zsh-sudo
+    sudo chown $USER:$USER /usr/share/zsh-sudo/
+    sudo systemctl enable mpd.service
+    sudo systemctl enable acpid.service
+    sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh -O /usr/share/zsh/plugins/sudo.plugin
+    sudo cp -r AutoAwesome/Configuration_Files/NerdFonts/* /usr/share/fonts/
+    cp -r AutoAwesome/Configuration_Files/kitty.conf .config/kitty/
+    cp -r AutoAwesome/Configuration_Files/color.ini .config/kitty/
+    cp -r AutoAwesome/Configuration_Files/keys.lua .config/awesome/configuration/
+    cp AutoAwesome/Configuration_Files/wallpaper.jpg $HOME/Pictures/.
+    rm -fr .zshrc
+    cp -r AutoAwesome/Configuration_Files/.zshrc $HOME
+    cp -r AutoAwesome/Configuration_Files/rc.lua .config/awesome/
+    cp -r AutoAwesome/Configuration_Files/picom.conf .config/awesome/theme/
+    cp AutoAwesome/Configuration_Files/init.lua .config/awesome/ui/decorations/
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    cp -r AutoAwesome/Configuration_Files/powerlevel10k $HOME/
+    ~/.fzf/install
+    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+    nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+    
+}
+
+function main (){
+    banner
+    INSTALL
+}
+
+main

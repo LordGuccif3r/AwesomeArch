@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AutoAwesome
+GenericName=Terminal emulator
+Comment=Fast, feature-rich, GPU based terminal
+TryExec=launchautoawesome
+Exec=launchautoawesome
+Icon=/usr/share/icons/hicolor/scalable/apps/autoawesome.svg
+Categories=System;TerminalEmulator;

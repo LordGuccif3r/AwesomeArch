@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+xterm -maximized -fg white -bg black -e sh -c autoawesome & 
