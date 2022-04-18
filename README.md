@@ -14,7 +14,7 @@ chmod +x Auto_Arch.sh
 ```
 **2)** After first reboot, go to menu and clic on AutoAwesome APP
 
-![AutoAwesome1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome4.PNG)
+![AutoAwesome1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome4.png)
 
 **3)** After second reboot, go to setting in the lower right corner and select awesome
 
