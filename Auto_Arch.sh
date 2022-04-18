@@ -235,19 +235,19 @@ function AUTOAWESOME(){
     cp AutoAwesome/launchautoawesome /mnt/usr/bin/
     cp AutoAwesome/autoawesome /mnt/usr/bin/
     chmod +x /mnt/usr/bin/launchautoawesome
-    chown $sudo_user:$sudo_user /mnt/usr/bin/launchautoawesome
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/usr/bin/launchautoawesome"
     chmod +x /mnt/usr/bin/autoawesome
-    chown $sudo_user:$sudo_user /mnt/usr/bin/autoawesome
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/usr/bin/autoawesome"
     mkdir -p /mnt/home/$sudo_user/.local/share/applications/
-    chown $sudo_user:$sudo_user /mnt/home/$sudo_user/.local/share/applications
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/home/$sudo_user/.local/share/applications"
     cp AutoAwesome/autoawesome.desktop /mnt/home/$sudo_user/.local/share/applications/
-    chown $sudo_user:$sudo_user /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop"
     chmod +x /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop 
     cp AutoAwesome/autoawesome.svg /mnt/usr/share/icons/hicolor/scalable/apps/
     cp -r AutoAwesome /mnt/home/$sudo_user/
     cp -r AutoAwesome /mnt/root
-    chown $sudo_user:$sudo_user /mnt/home/$sudo_user/AutoAwesome
-    chown $sudo_user:$sudo_user /mnt/root/AutoAwesome
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/home/$sudo_user/AutoAwesome"
+    su $sudo_user -c "sudo chown $sudo_user:$sudo_user /mnt/root/AutoAwesome"
 }
 
 function LA_SILLA_PA_CUANDO(){
