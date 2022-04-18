@@ -1,13 +1,15 @@
 # Automatic tool to install Arch Linux and a custome awesome theme
 
 ## First step install git
-'''
-pacman -Sy git<br>
-git clone https://github.com/LordGuccif3r/AwesomeArch.git<br>
-cd AwesomeArch<br>
-chmod +x Auto_Arch.sh<br>
-./Auto_Arch.sh<br>
-'''
+```
+pacman -Sy git
+git clone https://github.com/LordGuccif3r/AwesomeArch.git
+cd AwesomeArch
+chmod +x Auto_Arch.sh
+./Auto_Arch.sh
+```
+
+
 ## Final Results
 ![autoBspwm2.1](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome2.PNG)
 
