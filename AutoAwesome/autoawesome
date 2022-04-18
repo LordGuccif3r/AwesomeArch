@@ -43,16 +43,8 @@ function banner(){
     sleep 1
     echo "    Thanks Bleyom and Yorkox for the support to the community"
     echo -e "${end}"
-    sleep 3
-	echo -e "${green}"
+    sleep 5
 
-    echo "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
-    echo "████ ████▀▄▄▀█ ▄▄▀█ ▄▀████ ▄▄ █ ██ █▀▄▀█▀▄▀██▄██ ▄▄█ ▄▄ █ ▄▄▀██"
-    echo "████ ████ ██ █ ▀▀▄█ █ ████ █▀▀█ ██ █ █▀█ █▀██ ▄█ ▄████▄▀█ ▀▀▄██"
-    echo "████ ▀▀ ██▄▄██▄█▄▄█▄▄█████ ▀▀▄██▄▄▄██▄███▄██▄▄▄█▄███ ▀▀ █▄█▄▄██"
-    echo "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
-    sleep 7
-    echo -e "${end}"
 }
 
 
@@ -100,6 +92,7 @@ function INSTALL(){
     ~/.fzf/install
     git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
     nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+    reboot
     
 }
 
