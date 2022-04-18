@@ -20,7 +20,7 @@ chmod +x Auto_Arch.sh
 <br>
 **4)** Now you can say "I USE ARCH BY THE WAY"
 
-## If you want to make changes you need to watch the video of s4vitar on youtube 
+## RECOMENDATIONS!... If you want to make changes you need to watch the video of s4vitar on youtube 
 
 - https://www.youtube.com/watch?v=fshLf6u8B-w&t=4993s
 
