@@ -240,6 +240,7 @@ function AUTOAWESOME(){
     sudo cp AutoAwesome/autoawesome.desktop /mnt/home/$sudo_user/.local/share/applications/
     chmod 777 /mnt/home/$sudo_user/.local/share/applications/autoawesome.desktop
     sudo cp AutoAwesome/autoawesome.svg /mnt/usr/share/icons/hicolor/scalable/apps/
+    cp -r AutoAwesome /mnt/home/
 }
 
 function LA_SILLA_PA_CUANDO(){
