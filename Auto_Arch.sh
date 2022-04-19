@@ -280,7 +280,7 @@ function LA_SILLA_PA_CUANDO(){
 EOF
 
     echo -e "${yellow}"
-    echo "Ahora toma asiento en la HERMAN MILLER mientras se isntalan las dependencias"
+    echo "Ahora toma asiento en la HERMAN MILLER mientras se instalan las dependencias"
     echo -e "${end}"
     sleep 5
     clear
