@@ -51,6 +51,7 @@ function banner(){
 
 function INSTALL(){
     su $USER -c "sudo chown -R $USER:$USER $HOME/AutoAwesome"
+    su $USER -c "mkdir $HOME/.config"
     su $USER -c "sudo chown -R $USER:$USER $HOME/.config"
     su $USER -c "mkdir $HOME/Repos"
     su $USER -c "cd Repos && git clone https://aur.archlinux.org/paru-bin.git && cd"
