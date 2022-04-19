@@ -17,6 +17,8 @@ chmod +x Auto_Arch.sh
 <img width="720" height="500" src="https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome4.png" align=center>
 
 **3)** After second reboot, go to setting in the lower right corner and select awesome
+
+<img width="720" height="500" src="https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome5.png" align=center>
 <br>
 **4)** Now you can say "I USE ARCH BY THE WAY"
 
