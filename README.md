@@ -1,5 +1,5 @@
 # Automatic tool to install Arch Linux and a custome awesome theme
-## Final Results
+## Final Results. You need to install powerlevel10k manually
 ![AutoAwesome](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome2.PNG)
 ![AutoAwesome2](https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/awesome.PNG)
 ## Installation
@@ -22,8 +22,7 @@ chmod +x Auto_Arch.sh
 
 **4)** Now you can say "I USE ARCH BY THE WAY"
 
-## RECOMENDATIONS!... If you want to make changes you need to watch the video of S4vitar on youtube 
-## You need to install powerlevel10k manually
+## RECOMENDATIONS!... If you want to make changes you need to watch the video of S4vitar on youtube. 
 
 - https://www.youtube.com/watch?v=fshLf6u8B-w&t=4993s
 
