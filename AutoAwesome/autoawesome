@@ -50,16 +50,17 @@ function banner(){
 
 
 function INSTALL(){
-    su $USER -c "sudo chown -R $USER:$USER $HOME/AutoAwesome"
-    su $USER -c "mkdir $HOME/.config"
-    su $USER -c "sudo chown -R $USER:$USER $HOME/.config"
-    su $USER -c "mkdir $HOME/Repos"
-    su $USER -c "cd Repos && git clone https://aur.archlinux.org/paru-bin.git && cd"
-    su $USER -c "cd Repos/paru-bin/ && makepkg -si --noconfirm --nocheck && cd"
-    su $USER -c "mkdir -p $HOME/Repos/BlackArch"
-    cd $HOME/Repos/BlackArch/ && curl -O https://blackarch.org/strap.sh && cd
-    chmod +x $HOME/Repos/BlackArch/strap.sh
-    cd $HOME/Repos/BlackArch/ && sudo bash strap.sh && cd
+    user=$(users)
+    su $user -c "sudo chown -R $user:$user /home/$user/AutoAwesome"
+    su $user -c "mkdir /home/$user/.config"
+    su $user -c "sudo chown -R $user:$user /home/$user/.config"
+    su $user -c "mkdir /home/$user/Repos"
+    su $user -c "cd Repos && git clone https://aur.archlinux.org/paru-bin.git && cd"
+    su $user -c "cd Repos/paru-bin/ && makepkg -si --noconfirm --nocheck && cd"
+    su $user -c "mkdir -p /home/$user/Repos/BlackArch/"
+    cd /home/$user/Repos/BlackArch/ && curl -O https://blackarch.org/strap.sh && cd
+    chmod +x /home/$user/Repos/BlackArch/strap.sh
+    cd /home/$user/Repos/BlackArch/ && sudo bash strap.sh && cd
     sudo pacman -Sy
     sudo -s cd /usr/share/fonts/ && sudo wget -O /usr/share/fonts/comprimido.zip http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
     sudo unzip /usr/share/fonts/comprimido.zip -d /usr/share/fonts/
@@ -67,34 +68,34 @@ function INSTALL(){
     sudo find /usr/share/fonts/ | grep "\.ttf$" | while read line; do sudo cp -r $line /usr/share/fonts/ ; done
     sudo rm -fr /usr/share/fonts/iosevka-2.2.1
     sudo rm -fr /usr/share/fonts/iosevka-slab-2.2.1
-    sudo cp -r $HOME/AutoAwesome/Configuration_Files/icomoon/* /usr/share/fonts/.
-    su $USER -c "paru -S awesome-git zsh-syntax-highlighting zsh-autosuggestions scrub picom-git alacritty rofi todo-bin acpi acpid wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim brightnessctl alsa-utils alsa-tools pulseaudio lm_sensors mpd mpc mpdris2 ncmpcpp playerctl nerd-fonts-jetbrains-mono ttf-font-awesome ttf-font-awesome-4 ttf-material-design-icons --needed --noconfirm"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/dotfiles-main/config/* $HOME/.config"
-    su $USER -c "mkdir $HOME/.local/bin/"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/dotfiles-main/bin/* $HOME/.local/bin/"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/dotfiles-main/misc/. $HOME"
+    sudo cp -r /home/$user/AutoAwesome/Configuration_Files/icomoon/* /usr/share/fonts/.
+    su $user -c "paru -S awesome-git zsh-syntax-highlighting zsh-autosuggestions scrub picom-git alacritty rofi todo-bin acpi acpid wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim brightnessctl alsa-utils alsa-tools pulseaudio lm_sensors mpd mpc mpdris2 ncmpcpp playerctl nerd-fonts-jetbrains-mono ttf-font-awesome ttf-font-awesome-4 ttf-material-design-icons --needed --noconfirm"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/dotfiles-main/config/* /home/$user/.config"
+    su $user -c "mkdir /home/$user/.local/bin/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/dotfiles-main/bin/* /home/$user/.local/bin/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/dotfiles-main/misc/. /home/$user/"
     sudo pacman -S zsh feh metasploit impacket mdcat neovim evil-winrm python-pip responder nmap whatweb wfuzz gobuster burpsuite locate lsd bat net-tools --noconfirm 
-    sudo usermod --shel /usr/bin/zsh $USER 
+    sudo usermod --shel /usr/bin/zsh $user 
     sudo mkdir -p /usr/share/zsh-sudo
-    sudo chown $USER:$USER /usr/share/zsh-sudo/
+    sudo chown $user:$user /usr/share/zsh-sudo/
     sudo systemctl enable mpd.service
     sudo systemctl enable acpid.service
     sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh -O /usr/share/zsh/plugins/sudo.plugin
-    sudo cp -r $HOME/AutoAwesome/Configuration_Files/NerdFonts/* /usr/share/fonts/
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/kitty.conf $HOME/.config/kitty/"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/color.ini $HOME/.config/kitty/"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/keys.lua $HOME/.config/awesome/configuration/"
-    su $USER -c "cp $HOME/AutoAwesome/Configuration_Files/wallpaper.jpg $HOME/Pictures/."
+    sudo cp -r /home/$user/AutoAwesome/Configuration_Files/NerdFonts/* /usr/share/fonts/
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/kitty.conf /home/$user/.config/kitty/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/color.ini /home/$user/.config/kitty/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/keys.lua /home/$user/.config/awesome/configuration/"
+    su $user -c "cp /home/$user/AutoAwesome/Configuration_Files/wallpaper.jpg /home/$user/Pictures/."
     rm -fr .zshrc
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/.zshrc $HOME"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/rc.lua $HOME/.config/awesome/"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/picom.conf $HOME/.config/awesome/theme/"
-    su $USER -c "cp $HOME/AutoAwesome/Configuration_Files/init.lua $HOME/.config/awesome/ui/decorations/"
-    su $USER -c "git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf"
-    su $USER -c "cp -r $HOME/AutoAwesome/Configuration_Files/powerlevel10k $HOME/"
-    su $USER -c "~/.fzf/install"
-    su $USER -c "git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1"
-    su $USER -c "nvim +'hi NormalFloat guibg=#1e222a' +PackerSync"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/.zshrc /home/$user/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/rc.lua /home/$user/.config/awesome/"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/picom.conf /home/$user/.config/awesome/theme/"
+    su $user -c "cp /home/$user/AutoAwesome/Configuration_Files/init.lua /home/$user/.config/awesome/ui/decorations/"
+    su $user -c "git clone --depth 1 https://github.com/junegunn/fzf.git /home/$user/.fzf"
+    su $user -c "cp -r /home/$user/AutoAwesome/Configuration_Files/powerlevel10k /home/$user/"
+    su $user -c "~/.fzf/install"
+    su $user -c "git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1"
+    su $user -c "nvim +'hi NormalFloat guibg=#1e222a' +PackerSync"
     reboot
     
 }
