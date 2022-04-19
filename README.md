@@ -19,10 +19,11 @@ chmod +x Auto_Arch.sh
 **3)** After second reboot, go to setting in the lower right corner and select awesome
 
 <img width="720" height="500" src="https://github.com/LordGuccif3r/AwesomeArch/blob/main/AutoAwesome/Awesome5.png" align=center>
-<br>
+
 **4)** Now you can say "I USE ARCH BY THE WAY"
 
 ## RECOMENDATIONS!... If you want to make changes you need to watch the video of S4vitar on youtube 
+## You need to install powerlevel10k manually
 
 - https://www.youtube.com/watch?v=fshLf6u8B-w&t=4993s
 
